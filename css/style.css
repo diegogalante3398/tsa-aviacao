@@ -1,0 +1,152 @@
+:root {
+    --input-color: #EFF4F9;
+    --input-background: #EFF4F9;
+    --input-box-shadow: 0px 2px 2px rgba(187, 204, 221, 0.4);
+    --azul-color: #1188EE;
+    --header-background: #17222D;
+    --titulo-background: #EFF4F9;
+}
+
+/* Header */
+
+header {
+    background-color: var(--header-background);
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+header .container {
+    text-align: end;
+}
+
+header .container a {
+    text-decoration: none;
+    color: var(--input-color);
+    margin-left: 50px;
+}
+
+/* Main */
+
+/* Titulo Main */
+
+main .titulo {
+    background-color: var(--titulo-background);
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+main .titulo .alinhar-titulo {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Formulario */
+
+main .formulario {
+    padding-top: 5vh;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+main .formulario .half-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .formulario .half-box .box {
+    flex: 1 1 45%;
+    position: relative;
+}
+
+main .formulario .half-box .espaco {
+    margin-right: 30px;
+}
+
+main .formulario label {
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+main .formulario input, main .formulario label, main .formulario select {
+    display: block;
+    width: 100%;
+}
+
+main .formulario input:focus, main .formulario label:focus {
+    outline: none;
+}
+
+main .formulario input, main .formulario select {
+    background-color: var(--input-background);
+    box-shadow: var(--input-box-shadow);
+    border-radius: 5px;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+main .pagamento-titulo {
+    color: var(--azul-color);
+    margin-top: 30px;
+}
+
+hr {
+    background-color: var(--input-color);
+    border: none;
+    height: 3px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+main .formulario #radio-pagamento {
+    margin-bottom: 20px;
+}
+
+main .formulario #radio-pagamento input, main .formulario #radio-pagamento label {
+    box-shadow: none;
+    display: inline;
+    width: auto;
+    height: auto;
+}
+
+main .formulario #radio-pagamento label {
+    margin-right: 20px;
+}
+
+main .formulario .valor-debitado {
+    font-weight: 600;
+}
+
+main .formulario input[type="submit"] {
+    background-color: var(--azul-color);
+    color: var(--input-color);
+    width: 40vh;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+main .formulario input[type="submit"]:hover {
+    background-color: var(--input-color);
+    color: var(--azul-color);
+}
+
+main .informacoes {
+    font-size: small;
+    font-weight: 600;
+}
+
+/* Validação Formulário */
+main .formulario .validacao-form {
+    color: #ff3030;
+    position: absolute;
+    top: 57px;
+    font-size: .8rem;
+}
+
+.template {
+    display: none;
+}
