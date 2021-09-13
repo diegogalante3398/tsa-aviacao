@@ -45,7 +45,7 @@ main .titulo .alinhar-titulo {
 
 /* Formulario */
 
-main .formulario {
+main .conteudo {
     padding-top: 5vh;
     width: 50%;
     margin-right: auto;
@@ -89,9 +89,10 @@ main .formulario input, main .formulario select {
     margin-bottom: 10px;
 }
 
-main .pagamento-titulo {
+main .pagamento-titulo, main .lista-titulo {
     color: var(--azul-color);
     margin-top: 30px;
+    font-weight: bold;
 }
 
 hr {
@@ -121,7 +122,7 @@ main .formulario .valor-debitado {
     font-weight: 600;
 }
 
-main .formulario input[type="submit"] {
+main .formulario #submit {
     background-color: var(--azul-color);
     color: var(--input-color);
     width: 40vh;
@@ -129,7 +130,7 @@ main .formulario input[type="submit"] {
     transition: 0.3s ease all;
 }
 
-main .formulario input[type="submit"]:hover {
+main .formulario #submit:hover {
     background-color: var(--input-color);
     color: var(--azul-color);
 }
@@ -139,14 +140,48 @@ main .informacoes {
     font-weight: 600;
 }
 
+/* Lista de Cadastro */
+
+main .tabela {
+    border: 2px solid var(--input-color);
+    height: 500px;
+}
+
+main table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid var(--input-color);
+    table-layout: fixed;
+}
+
+main .conteudo table thead th, main .conteudo table tbody td {
+    border: 2px solid var(--input-color);
+    font-weight: bold;
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px;
+}
+
 /* Validação Formulário */
+
 main .formulario .validacao-form {
     color: #ff3030;
-    position: absolute;
-    top: 57px;
+    font-weight: bold;
     font-size: .8rem;
 }
 
-.template {
-    display: none;
+/* Footer */
+
+footer {
+    background-color: var(--azul-color);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+footer .container p {
+    color: var(--input-color);
+    font-size: 1rem;
 }

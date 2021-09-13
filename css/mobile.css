@@ -1,0 +1,20 @@
+@media screen and (max-width: 768px)  {
+    main .conteudo, main .titulo .alinhar-titulo {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px)  {
+    main .conteudo, main .titulo .alinhar-titulo {
+        width: 80%;
+    }
+    main .formulario .half-box {
+        display: inline;
+    }
+    main .formulario .half-box .espaco{
+        margin-right: 0;
+    }
+    main .formulario #radio-pagamento {
+        display: inline-flex;
+    }
+}

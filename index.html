@@ -14,6 +14,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobile.css">
 
     <!-- Fonte Nunito -->
     <style>
@@ -26,8 +27,8 @@
     <header>
         <div class="container">
             <nav>
-                <a href="#">Lista</a>
-                <a href="#">Cadastro</a>
+                <a href="./lista.html">Lista</a>
+                <a href="./index.html">Cadastro</a>
             </nav>
         </div>
     </header>
@@ -37,167 +38,162 @@
                 <h1>Cadastro</h1>
             </div>
         </div>
-        <div class="formulario">
-            <form action="" method="post" id="registro">
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo">
-
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu email">
-
-                <label for="cpf">CPF</label>
-                <input type="text" name="cpf" id="cpf" placeholder="111.111.111-01">
-
-                <div class="half-box">
-                    <div class="box espaco">
-                        <label for="endereco">Endereço</label>
-                        <input type="text" name="endereco" id="endereco" placeholder="Rua, Número, Bairro">
+        <div class="conteudo">
+            <div class="formulario">
+                <form action="" method="post" id="registro">
+                    <div>
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome"  minlength="5" maxlength="50" required>
+                        <!-- p -->
                     </div>
-                    <div class="box">
-                        <label for="estado">Estado</label>
-                        <select name="endereco" id="endereco">
-                            <option value="" disabled selected>Selecione o Estado</option>
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                        </select>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" maxlength="50" required>
                     </div>
-                    <div class="box espaco">
-                        <label for="cep">CEP</label>
-                        <input type="number" name="cep" id="cep" placeholder="22.222-000">
+                    <div>
+                        <label for="cpf">CPF</label>
+                        <input type="number" name="cpf" id="cpf" placeholder="111.111.111-01" minlength="11" maxlength="14" required>
                     </div>
-                    <div class="box">
-                        <label for="cidade">Cidade</label>
-                        <select name="endereco" id="endereco">
-                            <option disabled selected>Selecione a Cidade</option>
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                        </select>
-                    </div>
-                    <div class="box">
-                        <label for="cidade">Cidade</label>
-                        <select name="endereco" id="endereco">
-                            <option disabled selected>Selecione a Cidade</option>
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                        </select>
-                    </div>
-                </div>
-
-                <label class="pagamento-titulo">Forma de Pagamento</label>
-                <hr>
-                <div id="radio-pagamento">
-                    <input type="radio" id="credito" name="tipo-pagamento" value="credito" checked>
-                    <label for="credito">Cartão de Crédito</label>
-
-                    <input type="radio" id="boleto" name="tipo-pagamento" value="boleto">
-                    <label for="boleto">Boleto Bancário</label>
-                </div>
-                <div class="cartao">
+    
                     <div class="half-box">
                         <div class="box espaco">
-                            <label for="nome-cartao">Nome no Cartão</label>
-                            <input type="text" name="nome-cartao" id="nome-cartao" placeholder="Nome impresso no cartão">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" name="endereco" id="endereco" placeholder="Rua, Número, Bairro" minlength="5" maxlength="50" required>
                         </div>
-
                         <div class="box">
-                            <label for="data-expiracao">Data de Expiração</label>
-                            <div class="half-box">
-                                <div class="box espaco">
-                                    <select name="mes-expiracao" id="mes-expiracao">
-                                        <option disabled selected>Mês</option>
-                                        <option value="01">Janeiro</option>
-                                        <option value="02">Fevereiro</option>
-                                        <option value="03">Março</option>
-                                        <option value="04">Abril</option>
-                                        <option value="05">Maio</option>
-                                        <option value="06">Junho</option>
-                                        <option value="07">Julho</option>
-                                        <option value="08">Agosto</option>
-                                        <option value="09">Setembro</option>
-                                        <option value="10">Outubro</option>
-                                        <option value="11">Novembro</option>
-                                        <option value="12">Dezembro</option>
-                                    </select>
-                                </div>
-                                <div class="box">
-                                    <select name="ano-expiracao" id="ano-expiracao">
-                                        <option disabled selected>Ano</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2023">2023</option>
-                                        <option value="2024">2024</option>
-                                        <option value="2025">2025</option>
-                                    </select>
-                                </div>
-                            </div>
+                            <label for="estado">Estado</label>
+                            <select name="endereco" id="endereco">
+                                <option value="" disabled selected>Selecione o Estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
                         </div>
-
                         <div class="box espaco">
-                            <label for="num-cartao">Número do Cartão</label>
-                            <input type="number" name="num-cartao" id="num-cartao" placeholder="5555 5555 5555 5555">
+                            <label for="cep">CEP</label>
+                            <input type="number" name="cep" id="cep" placeholder="22.222-000" minlength="8" maxlength="11" required>
                         </div>
-
                         <div class="box">
-                            <label for="cod-cartao">Código de Segurança</label>
-                            <input type="number" name="cod-cartao" id="cod-cartao" placeholder="XXX">
+                            <label for="cidade">Cidade</label>
+                            <select name="endereco" id="endereco">
+                                <option disabled selected>Selecione a Cidade</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                            </select>
                         </div>
                     </div>
-                </div>
-                <div class="boleto">
-                    <!-- A ESCREVER -->
-                </div>
-                <hr>
-
-                <p class="valor-debitado">Seu cartão será debitado em R$49,00</p>
-                
-                <p class="validacao-form"></p>
-                <input type="submit" id="submit" value="REALIZAR MATRÍCULA">
-
-                <p class="informacoes">Informações seguras e criptografadas</p>
-            </form>
+    
+                    <label class="pagamento-titulo">Forma de Pagamento</label>
+                    <hr>
+                    <div id="radio-pagamento">
+                        <input type="radio" id="credito" name="tipo-pagamento" value="credito" checked>
+                        <label for="credito">Cartão de Crédito</label>
+    
+                        <input type="radio" id="boleto" name="tipo-pagamento" value="boleto">
+                        <label for="boleto">Boleto Bancário</label>
+                    </div>
+                    <div class="cartao">
+                        <div class="half-box">
+                            <div class="box espaco">
+                                <label for="nome-cartao">Nome no Cartão</label>
+                                <input type="text" name="nome-cartao" id="nome-cartao" placeholder="Nome impresso no cartão" minlength="6" maxlength="20" required>
+                            </div>
+    
+                            <div class="box">
+                                <label for="data-expiracao">Data de Expiração</label>
+                                <div class="half-box">
+                                    <div class="box espaco">
+                                        <select name="mes-expiracao" id="mes-expiracao">
+                                            <option disabled selected>Mês</option>
+                                            <option value="01">Janeiro</option>
+                                            <option value="02">Fevereiro</option>
+                                            <option value="03">Março</option>
+                                            <option value="04">Abril</option>
+                                            <option value="05">Maio</option>
+                                            <option value="06">Junho</option>
+                                            <option value="07">Julho</option>
+                                            <option value="08">Agosto</option>
+                                            <option value="09">Setembro</option>
+                                            <option value="10">Outubro</option>
+                                            <option value="11">Novembro</option>
+                                            <option value="12">Dezembro</option>
+                                        </select>
+                                    </div>
+                                    <div class="box">
+                                        <select name="ano-expiracao" id="ano-expiracao">
+                                            <option disabled selected>Ano</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="box espaco">
+                                <label for="num-cartao">Número do Cartão</label>
+                                <input type="number" name="num-cartao" id="num-cartao" placeholder="5555 5555 5555 5555" minlength="16" maxlength="16" required>
+                            </div>
+    
+                            <div class="box">
+                                <label for="cod-cartao">Código de Segurança</label>
+                                <input type="number" name="cod-cartao" id="cod-cartao" placeholder="XXX" minlength="3" maxlength="3" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boleto">
+                        <!-- A ESCREVER -->
+                    </div>
+                    <hr>
+    
+                    <p class="valor-debitado">Seu cartão será debitado em R$49,00</p>
+    
+                    <input type="submit" id="submit" value="REALIZAR MATRÍCULA">
+    
+                    <p class="informacoes">Informações seguras e criptografadas</p>
+                </form>
+            </div>
         </div>
     </main>
     <footer>
-
+        <div class="container">
+            <p>Diego Galante - 2021</p>
+        </div>
     </footer>
 
     <!-- JS -->
-    <script src="js/scripts.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
